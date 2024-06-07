@@ -18,7 +18,7 @@ def get_A_INV(p: Params) -> np.ndarray:
     return np.array([[p.c * p.λ, p.s], [-p.s * p.λ, p.c]])
 
 
-def get_t(x_0: int, y_0: int) -> np.ndarray:
+def get_t(x_0: float, y_0: float) -> np.ndarray:
     return np.array([x_0, y_0])
 
 
@@ -30,7 +30,7 @@ def get_e_y() -> np.ndarray:
     return np.array([0, 1])
 
 
-def zeta(pxe: int, p: Params) -> int:
+def zeta(pxe: float, p: Params) -> float:
 
     A = get_A(p=p)
     e_x = get_e_x()
@@ -46,7 +46,7 @@ def zeta(pxe: int, p: Params) -> int:
     return (numerator / denominator).item()
 
 
-def eta(pxc: int) -> np.ndarray:
+def eta(pxc: float) -> np.ndarray:
 
     matrix = np.array([[pxc], [1]], dtype=float)
 
@@ -55,13 +55,13 @@ def eta(pxc: int) -> np.ndarray:
     return scalar * matrix
 
 
-def tau(pxe: int, p: Params) -> np.ndarray:
+def tau(pxe: float, p: Params) -> np.ndarray:
 
     pxc = zeta(pxe=pxe, p=p)
     return eta(pxc=pxc)
 
 
-def chi(alpha: int, beta: int, p: Params) -> np.ndarray:
+def chi(alpha: float, beta: float, p: Params) -> np.ndarray:
     A_INV = get_A_INV(p=p)
     ex = get_e_x()
     ey = get_e_y()

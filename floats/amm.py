@@ -8,7 +8,7 @@ from schemas.vault import VaultTokenInfo
 
 
 def get_y_out_given_x_in(
-    x_in: int, bals: VaultTokenInfo, p: Params, r: R, midpoint: Midpoint, f: float
+    x_in: float, bals: VaultTokenInfo, p: Params, r: R, midpoint: Midpoint, f: float
 ) -> float:
     """Calculates the amount out given amount in."""
 
@@ -46,7 +46,7 @@ def get_y_out_given_x_in(
 
 
 def get_dy_over_dx(
-    x_in: int, bals: VaultTokenInfo, p: Params, r: R, midpoint: Midpoint, f: float
+    x_in: float, bals: VaultTokenInfo, p: Params, r: R, midpoint: Midpoint, f: float
 ) -> float:
     """Calculates the derivative of y with respect to x."""
 
