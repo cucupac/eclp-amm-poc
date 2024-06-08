@@ -12,6 +12,8 @@ def get_y_out_given_x_in(
 ) -> float:
     """Calculates the amount out given amount in."""
 
+    print("reserve_out:", bals.y_0)
+
     # constuct x'
     x_in_after_fees = f * x_in
     new_x_bal = bals.x_0 + x_in_after_fees
@@ -26,6 +28,8 @@ def get_y_out_given_x_in(
     # construct first term
     λ_bar = 1 - (1 / λ_sq)
     term_1 = (-xp) * λ_bar * p.s * p.c
+
+    print("term_1:", term_1)
 
     # construct the square root term
     s_term = 1 - λ_bar * s_sq
