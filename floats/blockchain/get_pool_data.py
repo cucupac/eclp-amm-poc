@@ -26,6 +26,7 @@ def __get_swap_fee_percentage() -> int:
 
 
 def get_effective_amount_in_percentage() -> float:
+
     swap_fee_percentage = __get_swap_fee_percentage() / 1e18
     return 1 - swap_fee_percentage
 

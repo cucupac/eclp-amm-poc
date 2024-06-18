@@ -41,3 +41,15 @@ class Vector2(BaseModel):
 class RateProviders(BaseModel):
     rate_provider_0: str
     rate_provider_1: str
+
+class AMMParams(BaseModel):
+    input: float
+    translated_reserve_out: float
+    λ_sq: float
+    input_scale: float
+    rate_out: float
+    pc1: float
+    pc2: float
+    pc3: float
+    pc4: float
+    pc5: float

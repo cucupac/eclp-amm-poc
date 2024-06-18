@@ -10,7 +10,7 @@ from schemas.pool import RateProviders
 from schemas.rate_providers import Rates
 
 # For Standarization
-from constants import X_0, Y_0, ZERO_ADDRESS, RATE_0
+from constants import ZERO_ADDRESS, RATE_0
 
 load_dotenv(".env")
 
